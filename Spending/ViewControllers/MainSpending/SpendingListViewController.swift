@@ -77,8 +77,6 @@ extension SpendingListViewController {
             }
         })
     }
-    
-   
 }
 
 // MARK: - UITableViewDataSource
@@ -112,7 +110,6 @@ extension SpendingListViewController: UITableViewDataSource {
                 }
             }
         }
-        
         return cell
     }
     

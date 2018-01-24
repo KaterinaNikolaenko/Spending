@@ -39,17 +39,28 @@ extension DetailsOfSpendingViewController {
     
     fileprivate func setupUI() {
         
-        titleLabel.text = item?.title
-        categoryLabel.text = item?.category
-        payerNameLabel.text = item!.payerName + " paid"
-        houseNameLabel.text = item?.houseName
-        amountPenceLabel.text = "£" + String(describing: item!.amountPence)
-        
-        let imageURL: URL = URL(string: item!.categoryIconURL)!
-        Constants.Queues.queueUtility.async{
-            if let data = try? Data(contentsOf: imageURL){
-                DispatchQueue.main.async {
-                    self.categoryIconImageView.image = UIImage(data: data)
+        if let title = item?.title {
+            titleLabel.text = title
+        }
+        if let category = item?.category {
+            categoryLabel.text = category
+        }
+        if let payerName = item?.payerName {
+            payerNameLabel.text = payerName + " paid"
+        }
+        if let houseName = item?.houseName {
+            houseNameLabel.text = houseName
+        }
+        if let amountPence = item?.amountPence {
+            amountPenceLabel.text = "£" + String(describing: amountPence)
+        }
+        if let categoryIconURL = item?.categoryIconURL {
+            let imageURL: URL = URL(string: categoryIconURL)!
+            Constants.Queues.queueUtility.async{
+                if let data = try? Data(contentsOf: imageURL){
+                    DispatchQueue.main.async {
+                        self.categoryIconImageView.image = UIImage(data: data)
+                    }
                 }
             }
         }
