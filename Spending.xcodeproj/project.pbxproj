@@ -13,6 +13,8 @@
 		0606EAF82018D6C700BB0E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAF62018D6C700BB0E6E /* Main.storyboard */; };
 		0606EAFA2018D6C700BB0E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAF92018D6C700BB0E6E /* Assets.xcassets */; };
 		0606EAFD2018D6C700BB0E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAFB2018D6C700BB0E6E /* LaunchScreen.storyboard */; };
+		0606EB072018D9B000BB0E6E /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB062018D9B000BB0E6E /* Spending.swift */; };
+		0606EB092018D9DA00BB0E6E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB082018D9DA00BB0E6E /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		0606EAF92018D6C700BB0E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0606EAFC2018D6C700BB0E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0606EAFE2018D6C700BB0E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0606EB062018D9B000BB0E6E /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		0606EB082018D9DA00BB0E6E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		564E625C728F5703D157C548 /* Pods-Spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF3F9BC11D48C1AC0FDFC5F /* Pods-Spending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.release.xcconfig"; sourceTree = "<group>"; };
 		CCF0E8C58C707ACB1507275D /* Pods_Spending.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spending.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +65,7 @@
 		0606EAF12018D6C700BB0E6E /* Spending */ = {
 			isa = PBXGroup;
 			children = (
+				0606EB042018D98500BB0E6E /* Models */,
 				0606EAF22018D6C700BB0E6E /* AppDelegate.swift */,
 				0606EAF42018D6C700BB0E6E /* ViewController.swift */,
 				0606EAF62018D6C700BB0E6E /* Main.storyboard */,
@@ -69,6 +74,23 @@
 				0606EAFE2018D6C700BB0E6E /* Info.plist */,
 			);
 			path = Spending;
+			sourceTree = "<group>";
+		};
+		0606EB042018D98500BB0E6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB052018D99A00BB0E6E /* Table */,
+				0606EB062018D9B000BB0E6E /* Spending.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0606EB052018D99A00BB0E6E /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB082018D9DA00BB0E6E /* Section.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		14EB7BD4FB1FFE60D5DDADBF /* Frameworks */ = {
@@ -221,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0606EB072018D9B000BB0E6E /* Spending.swift in Sources */,
+				0606EB092018D9DA00BB0E6E /* Section.swift in Sources */,
 				0606EAF52018D6C700BB0E6E /* ViewController.swift in Sources */,
 				0606EAF32018D6C700BB0E6E /* AppDelegate.swift in Sources */,
 			);
