@@ -9,6 +9,6 @@
 import Foundation
 
 struct Section {
-    var dueDate: String
+    var dueDate: Date
     var items: [Spending]
 }

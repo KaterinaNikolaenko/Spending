@@ -10,6 +10,7 @@ import UIKit
 
 class SpendingTableViewCell: UITableViewCell {
 
+    //UI
     @IBOutlet weak var categoryIconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var payerNameLabel: UILabel!

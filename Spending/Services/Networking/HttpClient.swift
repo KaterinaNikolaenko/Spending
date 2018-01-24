@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-
 class HttpClient{
     
     // Get spendings from API
@@ -22,5 +21,4 @@ class HttpClient{
             }
         })
     }
-    
 }

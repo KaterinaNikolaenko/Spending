@@ -17,14 +17,41 @@ class SpendingListViewController: UIViewController {
     private var sections = [Section]()
     
     // private
-    private var httpClient:HttpClient = HttpClient()
+    fileprivate var httpClient:HttpClient = HttpClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupSpending()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+// MARK: - Private
+
+extension SpendingListViewController {
+    
+    // Setup sections/rows for table
+    fileprivate func setupSpending()  {
+        
+        httpClient.getSpending(completion: { (itemsFromAPI) -> Void in
+            let spendingDict = Dictionary(grouping: itemsFromAPI, by: { $0.dueDate })
+            
+            for (key,value) in spendingDict {
+                var items  = [Spending]()
+                for spending in value {
+                    items.append(spending)
+                }
+                self.sections.append(Section(dueDate: Date.convertStringToDate(from: key), items: items))
+            }
+            self.sections = self.sections.sorted(by: {$0.dueDate < $1.dueDate})
+            DispatchQueue.main.async {
+                self.spendingTable.reloadData()
+            }
+        })
     }
 }
 
@@ -48,7 +75,7 @@ extension SpendingListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SpendingTableViewCell
         cell.titleLabel.text = item.title
-        cell.payerNameLabel.text = item.payerName
+        cell.payerNameLabel.text = item.payerName + " paid"
         cell.amountPenceLabel.text = "£" + String(item.amountPence)
         
         let imageURL: URL = URL(string: item.categoryIconURL)!
@@ -64,6 +91,17 @@ extension SpendingListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Date.convertDate(from: sections[section].dueDate)
+        return Date.convertDateToString(from: sections[section].dueDate)
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension SpendingListViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Helvetica Neue", size: 15)!
+        header.textLabel?.textColor = UIColor.lightGray
     }
 }
