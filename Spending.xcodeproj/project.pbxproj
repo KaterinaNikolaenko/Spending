@@ -9,24 +9,28 @@
 /* Begin PBXBuildFile section */
 		02C3A6B21268572904BD2FA1 /* Pods_Spending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF0E8C58C707ACB1507275D /* Pods_Spending.framework */; };
 		0606EAF32018D6C700BB0E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EAF22018D6C700BB0E6E /* AppDelegate.swift */; };
-		0606EAF52018D6C700BB0E6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EAF42018D6C700BB0E6E /* ViewController.swift */; };
+		0606EAF52018D6C700BB0E6E /* SpendingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EAF42018D6C700BB0E6E /* SpendingListViewController.swift */; };
 		0606EAF82018D6C700BB0E6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAF62018D6C700BB0E6E /* Main.storyboard */; };
 		0606EAFA2018D6C700BB0E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAF92018D6C700BB0E6E /* Assets.xcassets */; };
 		0606EAFD2018D6C700BB0E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0606EAFB2018D6C700BB0E6E /* LaunchScreen.storyboard */; };
 		0606EB072018D9B000BB0E6E /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB062018D9B000BB0E6E /* Spending.swift */; };
 		0606EB092018D9DA00BB0E6E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB082018D9DA00BB0E6E /* Section.swift */; };
+		0606EB102018DB2D00BB0E6E /* SpendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB0F2018DB2D00BB0E6E /* SpendingTableViewCell.swift */; };
+		0606EB132018DBFD00BB0E6E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB122018DBFD00BB0E6E /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0606EAEF2018D6C700BB0E6E /* Spending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0606EAF22018D6C700BB0E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0606EAF42018D6C700BB0E6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0606EAF42018D6C700BB0E6E /* SpendingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingListViewController.swift; sourceTree = "<group>"; };
 		0606EAF72018D6C700BB0E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0606EAF92018D6C700BB0E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0606EAFC2018D6C700BB0E6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0606EAFE2018D6C700BB0E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0606EB062018D9B000BB0E6E /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		0606EB082018D9DA00BB0E6E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0606EB0F2018DB2D00BB0E6E /* SpendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingTableViewCell.swift; sourceTree = "<group>"; };
+		0606EB122018DBFD00BB0E6E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		564E625C728F5703D157C548 /* Pods-Spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF3F9BC11D48C1AC0FDFC5F /* Pods-Spending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.release.xcconfig"; sourceTree = "<group>"; };
 		CCF0E8C58C707ACB1507275D /* Pods_Spending.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spending.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,9 +69,11 @@
 		0606EAF12018D6C700BB0E6E /* Spending */ = {
 			isa = PBXGroup;
 			children = (
+				0606EB0C2018DA6200BB0E6E /* Services */,
+				0606EB0B2018DA5700BB0E6E /* Helpers */,
+				0606EB0A2018DA4900BB0E6E /* ViewControllers */,
 				0606EB042018D98500BB0E6E /* Models */,
 				0606EAF22018D6C700BB0E6E /* AppDelegate.swift */,
-				0606EAF42018D6C700BB0E6E /* ViewController.swift */,
 				0606EAF62018D6C700BB0E6E /* Main.storyboard */,
 				0606EAF92018D6C700BB0E6E /* Assets.xcassets */,
 				0606EAFB2018D6C700BB0E6E /* LaunchScreen.storyboard */,
@@ -91,6 +97,54 @@
 				0606EB082018D9DA00BB0E6E /* Section.swift */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		0606EB0A2018DA4900BB0E6E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB0D2018DAFB00BB0E6E /* MainSpending */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0606EB0B2018DA5700BB0E6E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB112018DBEA00BB0E6E /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0606EB0C2018DA6200BB0E6E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0606EB0D2018DAFB00BB0E6E /* MainSpending */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB0E2018DB1000BB0E6E /* CustomCells */,
+				0606EAF42018D6C700BB0E6E /* SpendingListViewController.swift */,
+			);
+			path = MainSpending;
+			sourceTree = "<group>";
+		};
+		0606EB0E2018DB1000BB0E6E /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB0F2018DB2D00BB0E6E /* SpendingTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		0606EB112018DBEA00BB0E6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB122018DBFD00BB0E6E /* Date+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		14EB7BD4FB1FFE60D5DDADBF /* Frameworks */ = {
@@ -245,8 +299,10 @@
 			files = (
 				0606EB072018D9B000BB0E6E /* Spending.swift in Sources */,
 				0606EB092018D9DA00BB0E6E /* Section.swift in Sources */,
-				0606EAF52018D6C700BB0E6E /* ViewController.swift in Sources */,
+				0606EAF52018D6C700BB0E6E /* SpendingListViewController.swift in Sources */,
 				0606EAF32018D6C700BB0E6E /* AppDelegate.swift in Sources */,
+				0606EB102018DB2D00BB0E6E /* SpendingTableViewCell.swift in Sources */,
+				0606EB132018DBFD00BB0E6E /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
