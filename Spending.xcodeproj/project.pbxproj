@@ -19,6 +19,7 @@
 		0606EB132018DBFD00BB0E6E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB122018DBFD00BB0E6E /* Date+Extension.swift */; };
 		0606EB162018DDE100BB0E6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB152018DDE100BB0E6E /* Constants.swift */; };
 		0606EB192018DE2000BB0E6E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB182018DE2000BB0E6E /* HttpClient.swift */; };
+		0606EB1E2018E8F900BB0E6E /* DetailsOfSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0606EB1D2018E8F900BB0E6E /* DetailsOfSpendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		0606EB122018DBFD00BB0E6E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		0606EB152018DDE100BB0E6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0606EB182018DE2000BB0E6E /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		0606EB1D2018E8F900BB0E6E /* DetailsOfSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfSpendingViewController.swift; sourceTree = "<group>"; };
 		564E625C728F5703D157C548 /* Pods-Spending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF3F9BC11D48C1AC0FDFC5F /* Pods-Spending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spending.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spending/Pods-Spending.release.xcconfig"; sourceTree = "<group>"; };
 		CCF0E8C58C707ACB1507275D /* Pods_Spending.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spending.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 		0606EB0A2018DA4900BB0E6E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0606EB1A2018E8A000BB0E6E /* SpendingInfo */,
 				0606EB0D2018DAFB00BB0E6E /* MainSpending */,
 			);
 			path = ViewControllers;
@@ -167,6 +170,14 @@
 				0606EB182018DE2000BB0E6E /* HttpClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		0606EB1A2018E8A000BB0E6E /* SpendingInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0606EB1D2018E8F900BB0E6E /* DetailsOfSpendingViewController.swift */,
+			);
+			path = SpendingInfo;
 			sourceTree = "<group>";
 		};
 		14EB7BD4FB1FFE60D5DDADBF /* Frameworks */ = {
@@ -324,6 +335,7 @@
 				0606EB192018DE2000BB0E6E /* HttpClient.swift in Sources */,
 				0606EAF52018D6C700BB0E6E /* SpendingListViewController.swift in Sources */,
 				0606EAF32018D6C700BB0E6E /* AppDelegate.swift in Sources */,
+				0606EB1E2018E8F900BB0E6E /* DetailsOfSpendingViewController.swift in Sources */,
 				0606EB162018DDE100BB0E6E /* Constants.swift in Sources */,
 				0606EB102018DB2D00BB0E6E /* SpendingTableViewCell.swift in Sources */,
 				0606EB132018DBFD00BB0E6E /* Date+Extension.swift in Sources */,

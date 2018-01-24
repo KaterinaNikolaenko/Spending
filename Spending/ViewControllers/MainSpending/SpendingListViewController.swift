@@ -19,6 +19,8 @@ class SpendingListViewController: UIViewController {
     // private
     fileprivate var httpClient:HttpClient = HttpClient()
     
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,14 @@ class SpendingListViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails"{
+            let spending = sender as! Spending
+            let detailsVC = segue.destination as? DetailsOfSpendingViewController
+            detailsVC!.item = spending
+        }
     }
 }
 
@@ -103,5 +113,9 @@ extension SpendingListViewController: UITableViewDelegate{
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont(name: "Helvetica Neue", size: 15)!
         header.textLabel?.textColor = UIColor.lightGray
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: sections[indexPath.section].items[indexPath.row])
     }
 }

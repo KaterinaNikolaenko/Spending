@@ -11,22 +11,23 @@ import ObjectMapper
 
 class Spending: Mappable {
     
-    var id: Int!
-    var title: String!
-    var category: String!
-    var createdAt: String!
-    var isDisabled: Bool!
-    var isUpcoming: Bool!
-    var recurFreqDays: Int!
-    var recurFreqMonths: Int!
-    var recurDayNum: Int!
-    var amountPence: Int!
-    var dueDate: String!
-    var houseName: String!
-    var payerName: String!
-    var categoryIconURL: String!
-    var userShareAmountPence: Int!
-    
+    var id: Int = 0
+    var title: String = ""
+    var category: String = ""
+    var createdAt: String = ""
+    var isDisabled: Bool = true
+    var isUpcoming: Bool = true
+    var recurFreqDays: Int = 0
+    var recurFreqMonths: Int = 0
+    var recurDayNum: Int = 0
+    var amountPence: Int = 0
+    var dueDate: String = ""
+    var houseName: String = ""
+    var payerName: String = ""
+    var categoryIconURL: String = ""
+    var userShareAmountPence: Int = 0
+   
+    init?() {}
     required init?(map: Map) {
     }
     
