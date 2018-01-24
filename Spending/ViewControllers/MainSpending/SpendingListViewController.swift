@@ -18,12 +18,23 @@ class SpendingListViewController: UIViewController {
     
     // private
     fileprivate var httpClient:HttpClient = HttpClient()
+    var refreshControl: UIRefreshControl!
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSpending()
+        
+        //Refresh table
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh...")
+        refreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
+        spendingTable.addSubview(refreshControl)
+    }
+    
+    @objc func refreshTable(sender:AnyObject) {
         setupSpending()
     }
 
@@ -60,9 +71,14 @@ extension SpendingListViewController {
             self.sections = self.sections.sorted(by: {$0.dueDate < $1.dueDate})
             DispatchQueue.main.async {
                 self.spendingTable.reloadData()
+                if self.refreshControl != nil {
+                    self.refreshControl.endRefreshing()
+                }
             }
         })
     }
+    
+   
 }
 
 // MARK: - UITableViewDataSource
