@@ -17,8 +17,7 @@ class SpendingListViewController: UIViewController {
     private var sections = [Section]()
     
     // private
-//    private var httpClient:HttpClient = HttpClient()
-    private let queue = DispatchQueue.global(qos: .utility)
+    private var httpClient:HttpClient = HttpClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +52,7 @@ extension SpendingListViewController: UITableViewDataSource {
         cell.amountPenceLabel.text = "£" + String(item.amountPence)
         
         let imageURL: URL = URL(string: item.categoryIconURL)!
-        queue.async{
+        Constants.Queues.queueUtility.async{
             if let data = try? Data(contentsOf: imageURL){
                 DispatchQueue.main.async {
                     cell.categoryIconImageView.image = UIImage(data: data)
